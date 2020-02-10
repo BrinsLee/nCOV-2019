@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/common_margin_10"
+    android:layout_marginEnd="@dimen/common_margin_10"
+    android:layout_marginTop="@dimen/common_margin_5"
+    android:layout_marginBottom="@dimen/common_margin_5"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.brins.ncov_2019.ui.widget.FontTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:text="我是标题。。。"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:maxLines="2"
+        android:maxEms="20"
+        android:textSize="18sp"
+        android:ellipsize="end"
+        app:font_type="DIN-Bold"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:id="@+id/summary"
+        android:text="纯属胡说八道"
+        android:textSize="15sp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:maxLines="2"
+        android:maxEms="20"
+        android:ellipsize="end" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_summary"
+        app:layout_constraintTop_toBottomOf="@id/summary"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:maxLines="5"
+        android:maxEms="100"
+        android:ellipsize="end"
+        android:paddingBottom="15dp"
+        android:text="你看西安打卡机长宁静安宽泛即可你卡嚓安策啊惭愧爱课程年卡卡崔娜课程啊可参考法餐"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

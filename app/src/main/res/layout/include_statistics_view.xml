@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="detail"
+            type="com.brins.ncov_2019.model.StatisticsDetail" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical" android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal">
+
+        <com.brins.ncov_2019.ui.widget.FontTextView
+            app:font_type="DIN-Bold"
+            android:text="@{detail.countStr}"
+            bind:textColor="@{detail.type}"
+            android:id="@+id/count_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:padding="8dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="@{detail.type}"
+            android:textSize="15sp"
+            />
+        <LinearLayout
+            android:layout_marginTop="@dimen/common_margin_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/increase_title"
+                android:textSize="12sp"
+                android:textColor="@color/gery"
+                android:text="@string/compare_with_yesterday"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/increase_count"
+                android:textSize="12sp"
+                android:textColor="@android:color/holo_red_dark"
+                android:text="@{detail.increaseStr}"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

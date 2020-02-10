@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="15dp"
+    >
+
+    <com.brins.ncov_2019.ui.widget.FontTextView
+        app:font_type="DIN-Bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="15dp"
+        android:maxLines="1"
+        android:maxEms="15"
+        android:ellipsize="end"
+        android:text="我是标题啵啵啵啵啵啵啵啵啵啵啵啵啵啵啵啵啵啵"
+        android:id="@+id/title_tv"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/date_and_source"
+        android:text="2020-02-13   央视新闻"
+        android:textColor="@color/gery"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/title_tv"
+        app:layout_constraintStart_toStartOf="@id/title_tv"
+        android:paddingStart="15dp"
+        android:paddingTop="5dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/content_tv"
+        app:layout_constraintTop_toBottomOf="@id/date_and_source"
+        android:layout_marginTop="15dp"
+        android:maxLines="4"
+        android:maxEms="100"
+        android:ellipsize="end"
+        android:textColor="@color/gery"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="15dp"
+        android:textSize="13sp"
+        android:text="这是内容爱恨纠结那你和我粉嫩粉嫩收到发生困难户窝囊废的哪家哪家快递看可能对方可能 "
+        />
+
+    <ImageView
+        android:layout_width="@dimen/common_margin_200"
+        android:layout_height="@dimen/common_margin_200"
+        android:scaleType="centerCrop"
+        android:id="@+id/news_cover_iv"
+        android:src="@mipmap/ic_news"
+        app:layout_constraintTop_toBottomOf="@id/content_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="15dp"
+        android:visibility="gone"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
