@@ -3,6 +3,7 @@ package com.brins.ncov_2019.ui.news
 
 import android.view.View
 import android.widget.ImageView
+import androidx.constraintlayout.widget.ConstraintLayout
 
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -14,6 +15,8 @@ import com.brins.ncov_2019.ui.base.BaseDBFragment
 import com.brins.ncov_2019.utils.InjectorUtil
 import com.brins.ncov_2019.utils.SpacesItemDecoration
 import com.brins.ncov_2019.R
+import com.brins.ncov_2019.ui.activity.BaseActivity
+import com.brins.ncov_2019.ui.activity.WebActivity
 import com.brins.ncov_2019.ui.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_news.*
 
@@ -39,6 +42,10 @@ class NewsFragment : BaseFragment() {
                         if (position == 0) {
                             holder.getView<ImageView>(R.id.news_cover_iv).visibility = View.VISIBLE
                         }
+                        holder.getView<ConstraintLayout>(R.id.news_container_cl)
+                            .setOnClickListener {
+                                WebActivity.startThis(mContext as BaseActivity, t.sourceUrl)
+                            }
                         holder.setText(R.id.title_tv, t.title)
                         holder.setText(R.id.date_and_source, "${t.pubDateStr}  ${t.infoSource}")
                         holder.setText(R.id.content_tv, t.summary)

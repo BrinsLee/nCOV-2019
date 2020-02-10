@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">nCOV-2019</string>
+    <string name="main_tab">首页</string>
+    <string name="rumor">辟谣</string>
+    <string name="statistics">统计</string>
+    <string name="knowledge">知识</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="national_statistics">全国疫情实时数据</string>
+    <string name="province_statistics">广东疫情实时数据</string>
+    <string name="compare_with_yesterday">较昨日</string>
+    <string name="map">疫情地图</string>
+    <string name="trend">疫情趋势</string>
+    <string name="rumors">辟谣</string>
+    <string name="area">地区</string>
+    <string name="confirm">确诊</string>
+    <string name="dead">死亡</string>
+    <string name="cure">治愈</string>
+    <string name="conssultation">诊断</string>
+    <string name="search">查询同乘</string>
+    <string name="men_zhen">全国发热门诊</string>
+    <string name="online">在线义诊</string>
+</resources>

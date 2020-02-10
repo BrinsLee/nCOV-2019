@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#383838</color>
+    <color name="colorAccent">#3b3b3b</color>
+
+    <color name="alpha">#00323232</color>
+    <color name="white">#ffffff</color>
+    <color name="white_10">#1AFFFFFF</color>
+    <color name="white_20">#33FFFFFF</color>
+    <color name="white_30">#4DFFFFFF</color>
+    <color name="white_50">#80FFFFFF</color>
+    <color name="white_60">#99FFFFFF</color>
+    <color name="white_70">#B3FFFFFF</color>
+    <color name="white_80">#CCFFFFFF</color>
+    <color name="white_90">#E6FFFFFF</color>
+
+    <color name="background">#f69aaab6</color>
+    <color name="navigator">#bbffffff</color>
+    <color name="translucent">#aa000000</color>
+
+    <color name="white1">#DADADA</color>
+    <color name="white1_80">#99F5F4F9</color>
+    <color name="gery">#8F8F8F</color>
+    <color name="gery_80">#FDBBBF</color>
+    <color name="mask">#63000000</color>
+
+    <color name="btn_presss">#767676</color>
+    <color name="normal_text_color">#000000</color>
+    <color name="default_btn_text">#8F8D8D</color>
+
+    <color name="suspected_text">#FFC107</color>
+</resources>

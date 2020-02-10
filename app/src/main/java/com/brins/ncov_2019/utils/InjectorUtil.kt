@@ -1,11 +1,10 @@
 package com.brins.ncov_2019.utils
 
-import com.brins.ncov_2019.api.network.NewsNetwork
-import com.brins.ncov_2019.api.network.RumorNetwork
-import com.brins.ncov_2019.api.network.StatisticsNetwork
-import com.brins.ncov_2019.api.repository.NewsRepository
-import com.brins.ncov_2019.api.repository.RumorRepository
-import com.brins.ncov_2019.api.repository.StatisticsRepository
+import com.brins.ncov_2019.api.network.*
+import com.brins.ncov_2019.api.repository.*
+import com.brins.ncov_2019.ui.areas.AreaModelFactory
+import com.brins.ncov_2019.ui.areas.AreaViewModel
+import com.brins.ncov_2019.ui.knowledge.KnowledgeModelFactory
 import com.brins.ncov_2019.ui.news.NewsModelFactory
 import com.brins.ncov_2019.ui.rurmor.RumorModelFactory
 import com.brins.ncov_2019.ui.statistics.StatisticsModelFactory
@@ -24,6 +23,14 @@ object InjectorUtil {
     private fun getRumorsRepository() = RumorRepository.getInstance(RumorNetwork.getInstance())
 
     fun getRumorsModelFactory() = RumorModelFactory(getRumorsRepository())
+
+    private fun getKnowledgeRepository() = KnowledgeRepository.getInstance(KnowledgeNetWork.getInstance())
+
+    fun getKnowledgeModelFactory() = KnowledgeModelFactory(getKnowledgeRepository())
+
+    private fun getAreaRepository() = AreaRepository.getInstance(AreaNetwork.getInstance())
+
+    fun getAreaModelFactory() = AreaModelFactory(getAreaRepository())
 
 /*    fun getPlaceModelFactory() = PlaceModelFactory(getPlaceRepository())
 

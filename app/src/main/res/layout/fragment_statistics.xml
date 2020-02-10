@@ -53,6 +53,7 @@
                 android:textSize="15sp"
                 android:textColor="@android:color/black"
                 android:gravity="center"
+                android:visibility="gone"
                 android:layout_height="match_parent"
                 android:text="@string/province_statistics"
                 android:maxLines="2"/>

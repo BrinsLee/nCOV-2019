@@ -1,20 +1,30 @@
 package com.brins.ncov_2019.ui.rurmor
 
 
+import android.view.View
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import butterknife.OnClick
 
 import com.brins.ncov_2019.R
+import com.brins.ncov_2019.config.CONSULTATION
+import com.brins.ncov_2019.config.OUTPATIENT
+import com.brins.ncov_2019.config.SHARE
 import com.brins.ncov_2019.databinding.FragmentRumorBinding
 import com.brins.ncov_2019.model.NationalDataResult
 import com.brins.ncov_2019.model.RumorResult
+import com.brins.ncov_2019.ui.activity.BaseActivity
+import com.brins.ncov_2019.ui.activity.WebActivity
 import com.brins.ncov_2019.ui.adapter.CommonViewAdapter
 import com.brins.ncov_2019.ui.adapter.ViewHolder
 import com.brins.ncov_2019.ui.base.BaseDBFragment
 import com.brins.ncov_2019.ui.statistics.StatisticsViewModel
 import com.brins.ncov_2019.utils.InjectorUtil
 import com.brins.ncov_2019.utils.SpacesItemDecoration
+import com.scwang.smartrefresh.layout.api.RefreshLayout
+import com.scwang.smartrefresh.layout.listener.SimpleMultiPurposeListener
 import kotlinx.android.synthetic.main.fragment_rumor.*
 
 class RumorDBFragment : BaseDBFragment<FragmentRumorBinding>() {
@@ -70,9 +80,43 @@ class RumorDBFragment : BaseDBFragment<FragmentRumorBinding>() {
         })
         statisticsViewModel.fetchNationalData()
         rumorsViewModel.fetchRumors()
+        smart_refresh.setOnMultiPurposeListener(object : SimpleMultiPurposeListener() {
+            override fun onRefresh(refreshLayout: RefreshLayout) {
+                smart_refresh.finishRefresh(1000)
+                statisticsViewModel.fetchNationalData()
+            }
+
+            override fun onLoadMore(refreshLayout: RefreshLayout) {
+
+            }
+        })
     }
 
-    override fun isDataBinding(): Boolean {
-        return true
+
+@OnClick(
+    R.id.outpatient_container_cl1,
+    R.id.outpatient_container_cl2,
+    R.id.outpatient_container_cl0
+)
+fun onClick(v: View) {
+    when (v.id) {
+        R.id.outpatient_container_cl0 -> WebActivity.startThis(
+            mContext as BaseActivity,
+            OUTPATIENT
+        )
+        R.id.outpatient_container_cl1 -> WebActivity.startThis(
+            mContext as BaseActivity,
+            SHARE
+        )
+        R.id.outpatient_container_cl2 -> WebActivity.startThis(
+            mContext as BaseActivity,
+            CONSULTATION
+        )
+
     }
+}
+
+override fun isDataBinding(): Boolean {
+    return true
+}
 }

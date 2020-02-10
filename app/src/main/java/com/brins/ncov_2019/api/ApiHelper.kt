@@ -9,6 +9,10 @@ object ApiHelper {
     private var mNewsService: NewsService? = null
     private var mStatisticsService: StatisticsService? = null
     private var mRumorService: RumorService? = null
+    private var mWikiService: KnowledgeService? = null
+    private var mAreaService: AreaService? = null
+
+
 
 
     fun getNewsService(): NewsService {
@@ -45,5 +49,29 @@ object ApiHelper {
             }
         }
         return mRumorService!!
+    }
+
+    fun getWikiService(): KnowledgeService {
+        if (mWikiService == null) {
+            synchronized(KnowledgeService::class.java) {
+                if (mWikiService == null) {
+                    mWikiService =
+                        RetrofitFactory.newRetrofit(BASE_URL).create(KnowledgeService::class.java)
+                }
+            }
+        }
+        return mWikiService!!
+    }
+
+    fun getAreaService(): AreaService {
+        if (mAreaService == null) {
+            synchronized(AreaService::class.java) {
+                if (mAreaService == null) {
+                    mAreaService =
+                        RetrofitFactory.newRetrofit(BASE_URL).create(AreaService::class.java)
+                }
+            }
+        }
+        return mAreaService!!
     }
 }

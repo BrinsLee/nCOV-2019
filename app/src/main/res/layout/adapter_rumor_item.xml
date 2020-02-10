@@ -6,6 +6,7 @@
     android:layout_marginEnd="@dimen/common_margin_10"
     android:layout_marginTop="@dimen/common_margin_5"
     android:layout_marginBottom="@dimen/common_margin_5"
+    android:id="@+id/rumor_container_cl"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.brins.ncov_2019.ui.widget.FontTextView
