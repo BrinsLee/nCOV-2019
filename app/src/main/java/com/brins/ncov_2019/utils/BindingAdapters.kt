@@ -44,14 +44,16 @@ fun FontTextView.textColor(type: String?) {
 @BindingAdapter("bind:textDate")
 fun TextView.setDateText(date: Long?) {
     date?.let {
-        this.text = "截至 ${TimeUtils.getDate(it, 1000, MIN)}"
+        this.text = "截至 ${TimeUtils.millis2String(it, "yyyy/MM/dd HH:mm")}"
     }
 }
 
 @BindingAdapter("bind:imageUrl")
-fun ImageView.loadImageUrl(url : String?){
+fun ImageView.loadImageUrl(url: String?) {
     url?.let {
-        ImageLoadreUtils.getInstance().loadImage(MyApplication.context,ImageLoader.Builder()
-            .url(it).imgView(this).bulid())
+        ImageLoadreUtils.getInstance().loadImage(
+            MyApplication.context, ImageLoader.Builder()
+                .url(it).imgView(this).bulid()
+        )
     }
 }
