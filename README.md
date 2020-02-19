@@ -1,6 +1,6 @@
 # nCOV-2019
 下载地址
-https://www.lanzous.com/i984jfa
+https://www.lanzous.com/i9hd7zg
 
 <p align="left">
 	<img src="https://github.com/BrinsLee/nCOV-2019/blob/master/images/1.jpg" alt="Sample"  width="400" height="800">
